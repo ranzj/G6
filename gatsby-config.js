@@ -28,7 +28,7 @@ module.exports = {
         },
       },
       {
-        slug: 'docs/api/G6/Graph',
+        slug: 'docs/api/G6/GraphConfig',
         title: {
           zh: 'API 文档',
           en: 'API',
@@ -131,20 +131,28 @@ module.exports = {
         order: 1,
       },
       {
-        slug: 'api/nodeEdge',
+        slug: 'api/G6',
         title: {
-          zh: '节点/边/Combo',
-          en: 'Node & Edge & Combo',
+          zh: 'G6.',
+          en: 'G6.',
         },
         order: 3,
       },
       {
-        slug: 'api/layout',
+        slug: 'api/G6/Layout',
         title: {
           zh: 'Layout',
           en: 'Layout',
         },
         order: 4,
+      },
+      {
+        slug: 'api/Items',
+        title: {
+          zh: 'items',
+          en: 'items',
+        },
+        order: 5,
       },
     ],
     examples: [

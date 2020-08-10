@@ -1,5 +1,5 @@
 ---
-title: Node
+title: nodeInstance.{...}
 order: 1
 ---
 

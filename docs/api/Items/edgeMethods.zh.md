@@ -1,5 +1,5 @@
 ---
-title: Edge
+title: edgeInstance.{...}
 order: 2
 ---
 

@@ -1,5 +1,5 @@
 ---
-title: Combo
+title: comboInstance.{...}
 order: 3
 ---
 

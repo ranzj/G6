@@ -1,7 +1,25 @@
 ---
-title: G6.Graph 属性列表
+title: G6.Graph({...})
 order: 0
 ---
+
+Graph 的初始化通过 new 进行实例化，实例化时需要传入需要的参数。
+
+```javascript
+const graph = new G6.Graph({
+  container: '',
+  width: 500,
+  height: 500,
+  modes: {
+    default: ['drag-canvas'],
+  },
+  layout: {
+    type: 'radial',
+    unitRadius: 50,
+    center: [500, 300],
+  },
+});
+```
 
 ## container
 
@@ -75,6 +93,8 @@ order: 0
 | --- | --- | --- |
 | Object | {} | 各个状态下节点的样式，例如 `hover`、`selected`，3.1 版本新增。 |
 
+<span style="background-color: rgb(251, 233, 231); color: rgb(139, 53, 56)"><strong>⚠️ 注意:</strong></span> G6 3.1 版本中实例化 Graph 时，新增了 `nodeStateStyles` 及  `edgeStateStyles` 两个配置项，删除了 `nodeStyle` 和 `edgeStyle` ，使用 3.1 以下版本的同学，只需要将  `nodeStyle` 改成 `nodeStateStyles` ，将  `edgeStyle` 改成  `edgeStateStyles` ，配置内容保持不变。
+
 ## edgeStateStyles
 
 | 类型   | 默认值 | 描述                                                         |
@@ -91,19 +111,19 @@ order: 0
 
 | 类型   | 默认值 | 描述                                                         |
 | ------ | ------ | ------------------------------------------------------------ |
-| Object | {} | 默认状态下节点的配置，比如 `type`, `size`, `color`。会被写入的 data 覆盖。 |
+| Object | {} | 默认状态下节点的配置，比如 `type`, `size`, `color`。会被写入的 data 覆盖。 见 [节点的通用属性](/zh/docs/manual/middle/elements/nodes/defaultNode#节点的通用属性) |
 
 ## defaultEdge
 
 | 类型   | 默认值 | 描述                                                         |
 | ------ | ------ | ------------------------------------------------------------ |
-| Object | {} | 默认状态下边的配置，比如 `type`, `size`, `color`。会被写入的 data 覆盖。 |
+| Object | {} | 默认状态下边的配置，比如 `type`, `size`, `color`。会被写入的 data 覆盖。 见 [边的通用属性](/zh/docs/manual/middle/elements/edges/defaultEdge#边的通用属性)|
 
 ## defaultCombo
 
 | 类型   | 默认值 | 描述                                                         |
 | ------ | ------ | ------------------------------------------------------------ |
-| Object | {} | 默认状态下 Combo 的配置，比如 `type`, `color`。会被写入的 data 覆盖。3.5 版本新增。 |
+| Object | {} | 默认状态下 Combo 的配置，比如 `type`, `color`。会被写入的 data 覆盖。3.5 版本新增。 见 [Combo 的通用属性](/zh/docs/manual/middle/elements/combos/defaultCombo#combo-的通用属性) |
 
 ## plugins
 
